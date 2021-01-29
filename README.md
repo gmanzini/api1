@@ -1,7 +1,7 @@
 # API1
 ## API para retorno do valor do metro quadrado.
 
-
+## URL : https://api1-gmanzini.herokuapp.com/swagger/index.html
 ### Docker config:
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster AS build
@@ -29,4 +29,4 @@ CMD ASPNETCORE_URLS=http://*:$PORT dotnet API1Core.dll
 
 -heroku container:release web -a api1-gmanzini
 
--https://api1-gmanzini.herokuapp.com/swagger/index.html
+

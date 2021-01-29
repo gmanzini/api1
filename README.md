@@ -1,8 +1,8 @@
-# api1
-API criada para retorno do valor do metro quadrado.
+# API1
+## API criada para retorno do valor do metro quadrado.
 
 
-Docker config:
+### Docker config:
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster AS build
 WORKDIR /app
@@ -15,18 +15,18 @@ WORKDIR /app
 COPY --from=build /app/out .
 CMD ASPNETCORE_URLS=http://*:$PORT dotnet API1Core.dll
 
-Passo a passo para deploy no Heroku:
+### Passo a passo para deploy no Heroku:
 
-docker build -t api1-gmanzini .
+-docker build -t api1-gmanzini .
 
-heroku login
+-heroku login
 
-heroku container:login
+-heroku container:login
 
-docker tag api1-gmanzini registry.heroku.com/api1-gmanzini/web
+-docker tag api1-gmanzini registry.heroku.com/api1-gmanzini/web
 
-heroku container:push web -a api1-gmanzini
+-heroku container:push web -a api1-gmanzini
 
-heroku container:release web -a api1-gmanzini
+-heroku container:release web -a api1-gmanzini
 
-https://api1-gmanzini.herokuapp.com/swagger/index.html
+-https://api1-gmanzini.herokuapp.com/swagger/index.html

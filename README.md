@@ -1,5 +1,5 @@
 # API1
-## API criada para retorno do valor do metro quadrado.
+## API para retorno do valor do metro quadrado.
 
 
 ### Docker config:
